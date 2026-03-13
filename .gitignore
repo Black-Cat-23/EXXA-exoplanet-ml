@@ -1,3 +1,8 @@
+data/
+*.fits
+__pycache__/
+.ipynb_checkpoints/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
@@ -5,11 +10,6 @@ __pycache__/
 
 # C extensions
 *.so
-
-data/
-*.fits
-__pycache__/
-.ipynb_checkpoints/
 
 # Distribution / packaging
 .Python
