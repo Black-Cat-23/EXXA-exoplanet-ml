@@ -6,6 +6,11 @@ __pycache__/
 # C extensions
 *.so
 
+data/
+*.fits
+__pycache__/
+.ipynb_checkpoints/
+
 # Distribution / packaging
 .Python
 build/
