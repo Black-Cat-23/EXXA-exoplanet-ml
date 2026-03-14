@@ -1,8 +1,11 @@
-# EXXA – Protoplanetary Disk Clustering (ML4Sci GSoC Test)
+# EXXA – ML4Sci GSoC 2026 Test Submission
 
-This repository contains my solution to the **ML4Sci EXXA General Evaluation Test** for Google Summer of Code 2026.
+Author: Mitul Rishi  
+B.Tech Computer Science – IIIT Kota  
 
-The goal of this project is to analyze **synthetic ALMA observations of protoplanetary disks** and identify structural similarities using unsupervised machine learning techniques.
+This repository contains my solutions for the **ML4Sci GSoC 2026 EXXA test tasks**.
+
+The project demonstrates machine learning pipelines applied to astronomical data analysis.
 
 ---
 
@@ -20,23 +23,67 @@ Machine learning methods can help automatically identify and group disks with si
 
 ---
 
-## Dataset
+# 🚀 Quick Reproducibility
 
-The dataset contains **150 synthetic ALMA observations** stored as FITS files.
+Clone the repository and install dependencies:
 
-Each file contains a data cube with dimensions:
-(4, 1, 1, 600, 600)
+git clone https://github.com/Black-Cat-23/EXXA-exoplanet-ml.git
 
+cd EXXA-exoplanet-ml
 
-The first dimension corresponds to different observational channels.
+pip install -r requirements.txt
 
-For analysis, the channels are combined into a single 2D disk image.
+Launch Jupyter Notebook:
+
+jupyter notebook
+
+Open the notebooks and run all cells.
+
 
 ---
 
-## Pipeline Overview
+## Dataset
 
-The implemented pipeline performs the following steps:
+The dataset used in the General Test consists of **150 synthetic ALMA-like protoplanetary disk observations** stored in FITS format.
+
+Each file contains a data cube with dimensions:
+
+(4, 1, 1, 600, 600)
+
+The first dimension represents multiple observational channels.
+
+For analysis, the primary observational channel is extracted to obtain a **single 600 × 600 disk image** representing the intensity distribution.
+
+These synthetic observations mimic structures commonly observed in protoplanetary disks, including rings, gaps, and spiral features.
+
+**Note: The FITS dataset is part of the ML4Sci EXXA test resources and is not included in this repository.**
+
+---
+
+## Repository Structure
+
+```
+EXXA-exoplanet-ml
+│
+├── general_test
+│   └── exxa_general_test.ipynb
+│
+├── exxa3_test
+│   └── exxa3_transit_detection.ipynb
+│
+├── data
+│   └── FITS dataset provided in the ML4Sci test resources
+│
+├── requirements.txt
+└── README.md
+```
+
+
+# General Test – Protoplanetary Disk Analysis
+
+This notebook analyzes **protoplanetary disk images stored in FITS format**.
+
+Pipeline:
 
 1. Load and preprocess FITS disk observations
 2. Normalize disk images
@@ -47,21 +94,59 @@ The implemented pipeline performs the following steps:
 7. Visualize clusters using PCA and t-SNE
 8. Analyze disk structures through radial brightness profiles
 
----
-
-## Example Disk Observation
-
-Example visualization of a synthetic protoplanetary disk.
+This analysis identifies **distinct morphological groups of protoplanetary disks**.
 
 ---
 
-## Clustering Visualization
+# EXXA3 – Simulated Exoplanet Transit Detection
 
-The PCA-reduced dataset reveals distinct disk morphology clusters.
+This notebook implements a **machine learning pipeline for  simulated exoplanet transit signals** in stellar light curves
+
+Pipeline:
+
+1. Simulate transit light curves
+2. Generate synthetic dataset
+3. Explore orbital parameter distributions
+4. Phase-fold transit signals
+5. Train Random Forest classifier
+6. Evaluate with classification metrics
+7. Confusion matrix visualization
+8. Signal-to-Noise Ratio analysis
+9. Injection-recovery validation
+10. Feature importance analysis
+
+The goal is to demonstrate how **machine learning can assist in exoplanet detection workflows**.
 
 ---
 
-## Technologies Used
+# Key Techniques Used
+
+Astrophysics
+
+- Transit photometry
+- Phase folding
+- Radial brightness profiles
+- Signal-to-Noise Ratio analysis
+
+Machine Learning
+
+- PCA dimensionality reduction
+- KMeans clustering
+- Random Forest classification
+
+---
+
+# Future Improvements
+
+Possible extensions include:
+
+- convolutional neural networks for disk morphology classification
+- deep learning models for transit detection
+- training on real datasets (Kepler / TESS)
+
+---
+
+## Tools and Libraries
 
 - Python
 - NumPy
@@ -72,25 +157,10 @@ The PCA-reduced dataset reveals distinct disk morphology clusters.
 
 ---
 
-## Repository Structure
-EXXA-exoplanet-ml
-│
-├── notebooks
-│ └── exxa_general_test.ipynb
-|
-│── data
-|
-├── requirements.txt
-│
-└── README.md
-
-
----
 
 ## Author
 
 Mitul Rishi  
-B.Tech Computer Science  
-IIIT Kota
+B.Tech Computer Science – IIIT Kota  
 
-Interested in machine learning applications in astrophysics and planetary science.
+Interested in machine learning applications in astrophysics, planetary science, and scientific data analysis.
