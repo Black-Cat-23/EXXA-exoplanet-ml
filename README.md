@@ -1,7 +1,12 @@
 # EXXA – ML4Sci GSoC 2026 Test Submission
 
+![Python](https://img.shields.io/badge/Python-3.10-blue)
+![ML](https://img.shields.io/badge/Machine%20Learning-Scikit--Learn-orange)
+![Astronomy](https://img.shields.io/badge/Domain-Astrophysics-purple)
+![Status](https://img.shields.io/badge/Status-GSoC%20Test%20Submission-green)
+
 Author: Mitul Rishi  
-B.Tech Computer Science – IIIT Kota  
+B.Tech Computer Science – IIIT Kota
 
 This repository contains my solutions for the **ML4Sci GSoC 2026 EXXA test tasks**.
 
@@ -24,6 +29,11 @@ Machine learning methods can help automatically identify and group disks with si
 ---
 
 # 🚀 Quick Reproducibility
+
+All experiments can be reproduced by running the notebooks in order:
+
+1. `general_test/exxa_general_test.ipynb`
+2. `exxa3_test/exxa3_transit_detection.ipynb`
 
 Clone the repository and install dependencies:
 
